@@ -15,7 +15,23 @@
     "linux",
     "configuration"
   ],
-  "author": "Satyam Singh",
+  "author": {
+    "name": "Satyam Singh",
+    "email": "stymsingh@outlook.com",
+    "url": "https://github.com/stym-singh"
+  },
+  "contributors": [
+    {
+      "name": "Ayush Gaba",
+      "email": "ayushgaba71@gmail.com",
+      "url": "https://github.com/gabaji"
+    },
+    {
+      "name": "Harsh Baliyan",
+      "email": "harsh.baliyan.20@outlook.com",
+      "url": "https://github.com/harshbaliyan126"
+    }
+  ],
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/stym-singh/juno/issues"

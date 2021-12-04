@@ -1,30 +1,48 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
-
+const ipc = require('electron').ipcMain
+var mainWindow
+var userchoice
 function createWindow() {
-  const win = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
-    }
+      nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true,
+    },
+    minHeight: 800,
+    minWidth: 800,
   })
-
-  win.loadFile('index.html')
+  mainWindow.setMenuBarVisibility(false)
+  mainWindow.loadFile('static/index.html')
 }
 
 app.whenReady().then(() => {
   createWindow()
 
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow()
-    }
+  app.on('activate', function () {
+    if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 })
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
+app.on('window-all-closed', function () {
+  if (process.platform !== 'darwin') app.quit()
+})
+
+ipc.on('go-terminal', (e) => {
+  userchoice = {}
+  mainWindow.loadFile('static/defaults.html')
+})
+
+ipc.on('save-terminal', (e, arg) => {
+  userchoice.terminal = arg
+  console.log(userchoice)
+  mainWindow.loadFile('static/prompt.html')
+})
+
+ipc.on('save-prompt', (e, arg) => {
+  userchoice.terminal = arg
+  console.log(userchoice)
 })
