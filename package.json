@@ -1,0 +1,27 @@
+{
+  "name": "juno",
+  "version": "1.0.0",
+  "description": "A simple Linux utility to configure Linux distributions!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stym-singh/juno.git"
+  },
+  "keywords": [
+    "juno",
+    "linux",
+    "configuration"
+  ],
+  "author": "Satyam Singh",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/stym-singh/juno/issues"
+  },
+  "homepage": "https://github.com/stym-singh/juno#readme",
+  "dependencies": {
+    "electron": "^16.0.4"
+  }
+}
