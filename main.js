@@ -16,8 +16,9 @@ function createWindow() {
     minWidth: 800,
   })
   mainWindow.setMenuBarVisibility(false)
+  mainWindow.webContents.openDevTools();
   userchoice = {};
-  mainWindow.loadFile('static/font_theme.html')
+  mainWindow.loadFile('static/welcome.html')
 }
 
 app.whenReady().then(() => {
@@ -32,35 +33,27 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
 
-ipc.on('font-theme', (e) => {
-  userchoice = {}
-  mainWindow.loadFile('static/defaults.html')
-})
-
 ipc.on('welcome', (e) => {
   userchoice = {}
   mainWindow.loadFile('static/welcome.html')
 })
 
+ipc.on('font_theme', (e) => {
+  userchoice = {}
+  mainWindow.loadFile('static/font_theme.html')
+})
+
 ipc.on('term', (e, arg = null) => {
   if (!(arg === null)) {
-    userchoice.font_zshptheme = arg
+    userchoice.font_theme = arg
     console.log(userchoice)
   }
   mainWindow.loadFile('static/term.html')
 })
 
-ipc.on('zshp', (e, arg = null) => {
-  if (!(arg === null)) {
-    userchoice.term = arg
-    console.log(userchoice)
-  }
-
-})
-
 ipc.on('desk_env', (e, arg = null) => {
   if (!(arg === null)) {
-    userchoice.zshp = arg
+    userchoice.term = arg
     console.log(userchoice)
   }
   mainWindow.loadFile('static/desk_env.html')
@@ -71,6 +64,7 @@ ipc.on('twm', (e, arg = null) => {
     userchoice.desk_env = arg
     console.log(userchoice)
   }
+  mainWindow.loadFile('static/twm.html')
 })
 
 ipc.on('launcher', (e, arg = null) => {
@@ -78,6 +72,7 @@ ipc.on('launcher', (e, arg = null) => {
     userchoice.twm = arg
     console.log(userchoice)
   }
+  mainWindow.loadFile('static/launcher.html')
 })
 
 ipc.on('package_install', (e, arg = null) => {
@@ -85,6 +80,7 @@ ipc.on('package_install', (e, arg = null) => {
     userchoice.launcher = arg
     console.log(userchoice)
   }
+  mainWindow.loadFile('static/package_install.html')
 })
 
 
@@ -93,10 +89,13 @@ ipc.on('dev_tools', (e, arg = null) => {
     userchoice.package_install = arg
     console.log(userchoice)
   }
+  mainWindow.loadFile('static/dev_tools.html')
 })
 
 ipc.on('finish', (e, arg = null) => {
   if (!(arg === null)) {
     userchoice.dev_tools = arg
   }
+  console.log(userchoice);
+  mainWindow.loadFile('static/finish.html')
 })

@@ -10,7 +10,7 @@ nextWindow.addEventListener('click', () => {
 })
 
 prevWindow.addEventListener('click', () => {
-  ipcRenderer.send('welcome')
+  ipcRenderer.send('font_theme')
 })
 
 terminal_emulator.addEventListener('change', () => {
