@@ -4,12 +4,11 @@ const nextWindow = document.getElementById('nextbutton')
 const prevWindow = document.getElementById('prevbutton')
 
 nextWindow.addEventListener('click', () => {
-  console.log('clicked')
-  ipcRenderer.send('desk_env')
+  ipcRenderer.send('')
 })
 
 prevWindow.addEventListener('click', () => {
-  ipcRenderer.send('welcome')
+  ipcRenderer.send('term')
 })
 
 desktop_environment.addEventListener('change', () => {

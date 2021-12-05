@@ -16,7 +16,8 @@ function createWindow() {
     minWidth: 800,
   })
   mainWindow.setMenuBarVisibility(false)
-  mainWindow.loadFile('static/welcome.html')
+  userchoice = {};
+  mainWindow.loadFile('static/font_theme.html')
 }
 
 app.whenReady().then(() => {
@@ -46,7 +47,7 @@ ipc.on('term', (e, arg = null) => {
     userchoice.font_zshptheme = arg
     console.log(userchoice)
   }
-  mainWindow.loadFile('static/prompt.html')
+  mainWindow.loadFile('static/term.html')
 })
 
 ipc.on('zshp', (e, arg = null) => {
