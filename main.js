@@ -1,8 +1,11 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
+const { spawn } = require('child_process');
 const ipc = require('electron').ipcMain
 var mainWindow
 var userchoice
+var fs = require('fs');
+
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
@@ -92,4 +95,8 @@ ipc.on('finish', (e, arg = null) => {
   }
   console.log(userchoice);
   mainWindow.loadFile('static/finish.html')
+  var json = JSON.stringify(userchoice);
+  fs.writeFile('config.json', json, 'utf8',()=>{});
+  // const ls = spawn('gnome-terminal', ['--', 'bash' , './script.sh']);
+  
 })
