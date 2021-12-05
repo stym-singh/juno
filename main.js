@@ -16,7 +16,7 @@ function createWindow() {
     minWidth: 800,
   })
   mainWindow.setMenuBarVisibility(false)
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
   userchoice = {};
   mainWindow.loadFile('static/welcome.html')
 }
@@ -46,7 +46,6 @@ ipc.on('font_theme', (e) => {
 ipc.on('term', (e, arg = null) => {
   if (!(arg === null)) {
     userchoice.font_theme = arg
-    console.log(userchoice)
   }
   mainWindow.loadFile('static/term.html')
 })
@@ -75,7 +74,6 @@ ipc.on('launcher', (e, arg = null) => {
 ipc.on('package_install', (e, arg = null) => {
   if (!(arg === null)) {
     userchoice.launcher = arg
-    console.log(userchoice)
   }
   mainWindow.loadFile('static/package_install.html')
 })
@@ -84,7 +82,6 @@ ipc.on('package_install', (e, arg = null) => {
 ipc.on('dev_tools', (e, arg = null) => {
   if (!(arg === null)) {
     userchoice.package_install = arg
-    console.log(userchoice)
   }
   mainWindow.loadFile('static/dev_tools.html')
 })

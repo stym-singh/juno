@@ -4,7 +4,9 @@ const nextWindow = document.getElementById('nextbutton')
 const prevWindow = document.getElementById('prevbutton')
 
 nextWindow.addEventListener('click', () => {
-  ipcRenderer.send('')
+  data = {}
+  data.desk_env = document.getElementById('desktop-environment').value;
+  ipcRenderer.send('twm',data);
 })
 
 prevWindow.addEventListener('click', () => {
