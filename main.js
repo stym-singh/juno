@@ -97,6 +97,6 @@ ipc.on('finish', (e, arg = null) => {
   mainWindow.loadFile('static/finish.html')
   var json = JSON.stringify(userchoice);
   fs.writeFile('config.json', json, 'utf8',()=>{});
-  // const ls = spawn('gnome-terminal', ['--', 'bash' , './script.sh']);
-  
+  const ls = spawn('gnome-terminal', ['--', 'bash' , './script.sh']);
+  app.quit();
 })
