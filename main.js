@@ -16,7 +16,7 @@ function createWindow() {
     minWidth: 800,
   })
   mainWindow.setMenuBarVisibility(false)
-  mainWindow.loadFile('static/index.html')
+  mainWindow.loadFile('static/welcome.html')
 }
 
 app.whenReady().then(() => {
@@ -36,8 +36,13 @@ ipc.on('font-theme', (e) => {
   mainWindow.loadFile('static/defaults.html')
 })
 
+ipc.on('welcome', (e) => {
+  userchoice = {}
+  mainWindow.loadFile('static/welcome.html')
+})
+
 ipc.on('term', (e, arg = null) => {
-  if(!(args === null)){
+  if (!(arg === null)) {
     userchoice.font_zshptheme = arg
     console.log(userchoice)
   }
@@ -45,37 +50,37 @@ ipc.on('term', (e, arg = null) => {
 })
 
 ipc.on('zshp', (e, arg = null) => {
-  if(!(args === null)){
+  if (!(arg === null)) {
     userchoice.term = arg
     console.log(userchoice)
   }
-  
+
 })
 
 ipc.on('desk_env', (e, arg = null) => {
-  if(!(args === null)){
+  if (!(arg === null)) {
     userchoice.zshp = arg
     console.log(userchoice)
   }
-  
+  mainWindow.loadFile('static/desk_env.html')
 })
 
 ipc.on('twm', (e, arg = null) => {
-  if(!(args === null)){
+  if (!(arg === null)) {
     userchoice.desk_env = arg
     console.log(userchoice)
   }
 })
 
 ipc.on('launcher', (e, arg = null) => {
-  if(!(args === null)){
+  if (!(arg === null)) {
     userchoice.twm = arg
     console.log(userchoice)
   }
 })
 
 ipc.on('package_install', (e, arg = null) => {
-  if(!(args === null)){
+  if (!(arg === null)) {
     userchoice.launcher = arg
     console.log(userchoice)
   }
@@ -83,14 +88,14 @@ ipc.on('package_install', (e, arg = null) => {
 
 
 ipc.on('dev_tools', (e, arg = null) => {
-  if(!(args === null)){
+  if (!(arg === null)) {
     userchoice.package_install = arg
     console.log(userchoice)
   }
 })
 
 ipc.on('finish', (e, arg = null) => {
-  if(!(args === null)){
+  if (!(arg === null)) {
     userchoice.dev_tools = arg
   }
 })
