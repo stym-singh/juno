@@ -54,7 +54,6 @@ ipc.on('term', (e, arg = null) => {
 ipc.on('desk_env', (e, arg = null) => {
   if (!(arg === null)) {
     userchoice.term = arg
-    console.log(userchoice)
   }
   mainWindow.loadFile('static/desk_env.html')
 })
@@ -62,7 +61,6 @@ ipc.on('desk_env', (e, arg = null) => {
 ipc.on('twm', (e, arg = null) => {
   if (!(arg === null)) {
     userchoice.desk_env = arg
-    console.log(userchoice)
   }
   mainWindow.loadFile('static/twm.html')
 })
@@ -70,7 +68,6 @@ ipc.on('twm', (e, arg = null) => {
 ipc.on('launcher', (e, arg = null) => {
   if (!(arg === null)) {
     userchoice.twm = arg
-    console.log(userchoice)
   }
   mainWindow.loadFile('static/launcher.html')
 })
