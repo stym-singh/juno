@@ -8,10 +8,115 @@
   <meta name="viewport" content="width=device-width" />
 
   <title>Juno - Desktop Environment</title>
-  <link href="styles/halfmoon-variables.min.css" rel="stylesheet" />
+  <link href="styles/pico.min.css" rel="stylesheet" />
 </head>
 
-<body data-dm-shortcut-enabled="true" data-set-preferred-mode-onload="true">
+<body>
+  <main class="container">
+    <progress value="4" max="9"></progress>
+    <h1>Desktop Environment</h1>
+
+    <!-- Choose Desktop Environment -->
+    <label for="desktop-environment">Desktop Environment</label>
+    <select id="desktop-environment">
+      <option value="none" selected disabled>Choose a desktop environment...</option>
+      <option value="gnome">GNOME</option>
+      <option value="kde">KDE</option>
+      <option value="xfce">Xfce</option>
+    </select>
+
+    <!-- Desktop Environment Info -->
+    <article id="gnome-info" style="display: none">
+      <h2>GNOME</h2>
+      <p>GNOME is a free and open-source desktop environment for Unix-like operating
+        systems. GNOME was originally an acronym for GNU Network Object Model Environment, but the acronym
+        was dropped because it no longer reflected the vision of the GNOME project. GNOME is developed by
+        The GNOME Project, which is composed of both volunteers and paid contributors, the largest corporate
+        contributor being Red Hat.
+      </p>
+      <p>It is an international project that aims to develop software frameworks
+        for the development of software, to program end-user applications based on these frameworks, and to
+        coordinate efforts for internationalization and localization and accessibility of that software.</p>
+
+      <p>GNOME 3 is the default desktop environment on many major Linux distributions
+        including Fedora,
+        Debian, Ubuntu, SUSE Linux Enterprise, Red Hat Enterprise Linux, CentOS, Pop! _OS, Oracle Linux,
+        Endless OS, and Tails; as well as Solaris, a Unix operating system. The continued fork of the last
+        GNOME 2 release, called MATE, is default on many Linux distros that target low usage of system
+        resources.</p>
+      <a href="https://gnome.org" role="button" class="secondary" target="_blank">Visit Website<svg
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+          <path fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+        </svg></a>
+    </article>
+
+    <article id="kde-info" style="display: none">
+      <h2>KDE</h2>
+      <p>KDE stands for K Desktop Environment. It is a desktop environment for Linux based
+        operation system. You can think KDE as a GUI for Linux OS. KDE has proved Linux users to make it use
+        as easy as they use windows. KDE provides Linux users a graphical interface to choose their own
+        customized desktop environment. You can choose your Graphical Interface among various available GUI
+        interfaces that have their own look.</p>
+
+      <p>You can imagine Linux without KDE and GNOME just like DOS in windows. KDE and GNOME are much similar
+        with Windows except they are related to Linux through x server rather then operation system. When
+        you install Linux you have a choice to choose your own desktop environment from two or three
+        different desktop environments like KDE and GNOME. Another popular environment same as KDE is GNOME.
+        Both come with variety of features with different distributions.</p>
+      <a href="https://kde.org" role="button" class="secondary" target="_blank">Visit Website<svg
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+          <path fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+        </svg></a>
+    </article>
+
+    <article id="xfce-info" style="display: none">
+      <h2>Xfce</h2>
+      <p>Xfce or XFCE is a free and open-source desktop environment for Linux and
+        Unix-like operating systems. Xfce aims to be fast and lightweight while still being visually
+        appealing and easy to use. Xfce embodies the traditional Unix philosophy of modularity and
+        re-usability.</p>
+      <a href="https://xfce.org" role="button" class="secondary" target="_blank">Visit Website<svg
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+          <path fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+        </svg></a>
+    </article>
+
+    <!-- Prev Next Buttons -->
+    <div class="grid">
+      <button id="prevbutton" role="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Previous
+      </button>
+      <button id="nextbutton" role="button">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </button>
+    </div>
+  </main>
+  <script src="src/desk_env.js"></script>
+</body>
+
+<!-- <body data-dm-shortcut-enabled="true" data-set-preferred-mode-onload="true">
   <div class="page-wrapper">
     <div class="content-wrapper">
       <div class="d-flex justify-content-end align-items-center m-20">
@@ -110,10 +215,8 @@
       </div>
     </div>
   </div>
-
-  <!-- Halfmoon JS -->
   <script src="src/halfmoon.min.js"></script>
   <script src="src/desk_env.js"></script>
-</body>
+</body> -->
 
 </html>
