@@ -8,46 +8,80 @@
   <meta name="viewport" content="width=device-width" />
 
   <title>Juno - Startpage</title>
-  <link href="styles/halfmoon-variables.min.css" rel="stylesheet" />
+  <link href="styles/pico.min.css" rel="stylesheet" />
 </head>
 
-<body data-dm-shortcut-enabled="true" data-set-preferred-mode-onload="true">
-  <div class="page-wrapper">
-    <div class="content-wrapper">
-      <div class="d-flex justify-content-end align-items-center m-20">
-        <button class="btn" type="button" onclick="halfmoon.toggleDarkMode()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill"
-            viewBox="0 0 16 16">
-            <path
-              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-          </svg>
-        </button>
-      </div>
-      <div class="container">
-        <div class="m-10">
-          <h1 class="text-center font-weight-bolder">
-            Juno
-          </h1>
-          <p class="text-center">
-            A simple Linux utility to configure Linux distributions!
-          </p>
-          <div class="text-center">
-            <button id="nextbutton" class="btn btn-primary btn-lg" type="button">
-              Start Configuring
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<body>
+  <main class="container">
 
-  <!-- Halfmoon JS -->
-  <script src="src/halfmoon.min.js"></script>
+    <!-- Progress Bar -->
+    <progress value="1" max="9"></progress>
+
+    <!-- Header -->
+    <hgroup>
+      <h1>Juno</h1>
+      <h3>A simple Linux utility to configure Linux distributions!</h3>
+    </hgroup>
+
+    <!-- Next Buttons -->
+    <button id="nextbutton" role="button">
+      Start Configuring
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+      </svg>
+    </button>
+
+    <!-- Cards -->
+    <article>
+      <h3>Features</h3>
+      <ul>
+        <li>Font and Theme Configuration</li>
+        <li>Terminal Emulator Configuration</li>
+        <li>Desktop Environment Configuration</li>
+        <li>Tiling Window Manager Configuration</li>
+        <li>Program Launcher Configuration</li>
+        <li>Common Programms Installer</li>
+        <li>Developer Tools Installer</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Project Links</h3>
+      <a href="https://github.com/stym-singh/juno" role="button" class="secondary" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+        </svg>
+        GitHub &MediumSpace;
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+          <path fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+        </svg>
+      </a>
+      <a href="https://github.com/stym-singh/ArdevLinux" role="button" class="secondary" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-terminal"
+          viewBox="0 0 16 16">
+          <path
+            d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9zM3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z" />
+          <path
+            d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h12z" />
+        </svg>
+        Ardev Linux &MediumSpace;
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+          <path fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+        </svg>
+      </a>
+    </article>
+  </main>
   <script src="src/welcome.js"></script>
 </body>
 
