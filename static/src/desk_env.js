@@ -26,5 +26,9 @@ desktop_environment.addEventListener('change', () => {
     document.getElementById('gnome-info').style.display = "none"
     document.getElementById('kde-info').style.display = "none"
     document.getElementById('xfce-info').style.display = "block"
+  } else if (desktop_environment.value == 'none') {
+    document.getElementById('gnome-info').style.display = "none"
+    document.getElementById('kde-info').style.display = "none"
+    document.getElementById('xfce-info').style.display = "none"
   }
 })
