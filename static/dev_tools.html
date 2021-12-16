@@ -8,69 +8,125 @@
   <meta name="viewport" content="width=device-width" />
 
   <title>Juno - Developer Tools</title>
-  <link href="styles/halfmoon-variables.min.css" rel="stylesheet" />
+  <link href="styles/pico.min.css" rel="stylesheet" />
 </head>
 
-<body data-dm-shortcut-enabled="true" data-set-preferred-mode-onload="true">
-  <div class="page-wrapper">
-    <div class="content-wrapper">
-      <div class="d-flex justify-content-end align-items-center m-20">
-        <button class="btn" type="button" onclick="halfmoon.toggleDarkMode()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill"
-            viewBox="0 0 16 16">
-            <path
-              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-          </svg>
-        </button>
+<body>
+  <main class="container">
+    <progress value="8" max="9"></progress>
+    <h1>Developer Tools</h1>
+
+    <div class="grid">
+      <div>
+        <fieldset>
+          <label for="vs-code">
+            <input type="checkbox" id="vs-code" name="vs-code">
+            VS Code
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="atom">
+            <input type="checkbox" id="atom" name="atom">
+            Atom
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="brackets">
+            <input type="checkbox" id="brackets" name="brackets">
+            Brackets
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="geany">
+            <input type="checkbox" id="geany" name="geany">
+            Geany
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="sublime-text">
+            <input type="checkbox" id="sublime-text" name="sublime-text">
+            Sublime Text
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="neovim">
+            <input type="checkbox" id="neovim" name="neovim">
+            Neovim
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="gnu-emacs">
+            <input type="checkbox" id="gnu-emacs" name="gnu-emacs">
+            GNU Emacs
+          </label>
+        </fieldset>
       </div>
-      <div class="container">
-        <div class="m-10">
-          <h1 class="text-center font-weight-bolder">Developer Tools</h1>
-          <form>
-            <div class="form-group">
-              <div class="custom-checkbox m-15 font-size-24">
-                <input type="checkbox" id="vscode" value="vscode">
-                <label for="vscode">VS Code</label>
-              </div>
-              <div class="custom-checkbox m-15 font-size-24">
-                <input type="checkbox" id="neovim" value="neovim">
-                <label for="neovim">Neovim</label>
-              </div>
-              <div class="custom-checkbox m-15 font-size-24">
-                <input type="checkbox" id="geany" value="geany">
-                <label for="geany">Geany</label>
-              </div>
-              <div class="custom-checkbox m-15 font-size-24">
-                <input type="checkbox" id="sublime" value="sublime">
-                <label for="sublime">Sublime Text</label>
-              </div>
-            </div>
-          </form>
-          <div class="text-center">
-            <button id="prevbutton" class="btn btn-primary btn-lg" type="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-arrow-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-              </svg>
-              Previous
-            </button>
-            <button id="nextbutton" class="btn btn-primary btn-lg" type="button">
-              Next
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-              </svg>
-            </button>
-          </div>
-        </div>
+      <div>
+        <fieldset>
+          <label for="android-studio">
+            <input type="checkbox" id="android-studio" name="android-studio">
+            Android Studio
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="clion">
+            <input type="checkbox" id="clion" name="clion">
+            CLion
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="intellij-idea-community">
+            <input type="checkbox" id="intellij-idea-community" name="intellij-idea-community">
+            IntelliJ IDEA Community
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="intellij-pycharm-community">
+            <input type="checkbox" id="intellij-pycharm-community" name="intellij-pycharm-community">
+            IntelliJ PyCharm Community
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="webstorm">
+            <input type="checkbox" id="webstorm" name="webstorm">
+            Webstorm
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="postman">
+            <input type="checkbox" id="postman" name="postman">
+            Postman
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="insomnia">
+            <input type="checkbox" id="insomnia" name="insomnia">
+            Insomnia
+          </label>
+        </fieldset>
       </div>
     </div>
-  </div>
 
-  <!-- Halfmoon JS -->
-  <script src="src/halfmoon.min.js"></script>
+    <!-- Prev Next Buttons -->
+    <div class="grid">
+      <button id="prevbutton" role="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Previous
+      </button>
+      <button id="nextbutton" role="button">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </button>
+    </div>
+  </main>
   <script src="src/dev_tools.js"></script>
 </body>
 
