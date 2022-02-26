@@ -1,2 +1,2 @@
-sudo echo hello world
-sleep 1m
+chmod +x ./scripts/app.sh
+./app.sh config.json
