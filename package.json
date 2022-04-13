@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/stym-singh/juno#readme",
   "dependencies": {
-    "electron": "^16.0.4",
-    "shelljs": "^0.8.4"
+    "electron": "^18.0.3",
+    "shelljs": "^0.8.5"
   }
 }
