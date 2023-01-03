@@ -18,7 +18,7 @@ TELEGRAM="$(cat "$1" | jq -r '.package_install.telegram')"
 LIBREOFFICE="$(cat "$1" | jq -r '.package_install.libreoffice')"
 CHROMIUM="$(cat "$1" | jq -r '.package_install.chromium')"
 VLC="$(cat "$1" | jq -r '.package_install.vlc')"
-STEAM="$(cat "$1" | jq -r 'package_install.steam')"
+STEAM="$(cat "$1" | jq -r '.package_install.steam')"
 
 ##########################################################
 
@@ -36,11 +36,7 @@ WEBSTORM="$(cat "$1" | jq -r '.dev_tools.webstorm')"
 POSTMAN="$(cat "$1" | jq -r '.dev_tools.webstorm')"
 INSOMNIA="$(cat "$1" | jq -r '.dev_tools.insomnia')"
 
-git clone https://aur.archlinux.org/yay.git $HOME
-cd yay
-makepkg -si
 
-cd $HOME && rm -rf yay
 sudo pacman -S --noconfirm --needed flatpak
 
 if [[ "$TERMINAL_EMULATOR" != "none" ]]; then

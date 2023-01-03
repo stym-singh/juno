@@ -1,2 +1,2 @@
 chmod +x ./scripts/app.sh
-./app.sh config.json
+./scripts/app.sh config.json
